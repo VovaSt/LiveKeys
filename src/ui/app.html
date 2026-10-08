@@ -111,6 +111,7 @@
 </dialog>
 <dialog #settingsDialog aria-labelledby="settings-title">
   <div class="dialog-heading"><h2 id="settings-title">Налаштування</h2><button class="icon-button" aria-label="Закрити налаштування" (click)="settingsDialog.close()"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
+  <button (click)="settingsDialog.close(); tutorial.open()">Короткий туторіал</button>
   <fieldset [disabled]="busy() || restoring() || storageBusy()"><app-effects-editor [settings]="preset().effects" (changed)="editEffects($event)"></app-effects-editor></fieldset>
   <div class="settings-grid">
     <label>{{ t.profile }}<select id="voices" [disabled]="restoring()" [value]="voiceLimit()" (change)="profile($event)"><option value="64">{{ t.normal }}</option><option value="32">{{ t.low }}</option></select></label>
@@ -140,3 +141,4 @@
   <a href="samples/felt-piano/ATTRIBUTION.txt" target="_blank" rel="noopener">Felt Piano · джерело та ліцензія</a>
   <a href="samples/worship-textures/ATTRIBUTION.txt" target="_blank" rel="noopener">Worship-педи · джерело та ліцензії</a>
 </dialog>
+<app-tutorial #tutorial></app-tutorial>

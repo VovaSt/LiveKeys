@@ -11,8 +11,9 @@ import { uk } from './strings';
 import { factoryPresets } from '../domain/factory';
 import type { LayerEffects, PerformanceEffects } from '../domain/models';
 import { EffectsEditorComponent } from './effects-editor';
+import { TutorialComponent } from './tutorial';
 
-@Component({ selector: 'app-root', standalone: true, imports: [LayerEditorComponent, EffectsEditorComponent], templateUrl: './app.html' })
+@Component({ selector: 'app-root', standalone: true, imports: [LayerEditorComponent, EffectsEditorComponent, TutorialComponent], templateUrl: './app.html' })
 export class AppComponent implements OnDestroy {
   readonly t = uk;
   readonly factories = factoryPresets;

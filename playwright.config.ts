@@ -3,6 +3,7 @@ export default defineConfig({
   testDir: './tests/browser', testMatch: '**/*.spec.ts', workers: 1,
   timeout: 90000, expect: { timeout: 15000 },
   use: { baseURL: 'http://127.0.0.1:4200', browserName: 'chromium',
+    storageState: { cookies: [], origins: [{ origin: 'http://127.0.0.1:4200', localStorage: [{ name: 'livekeys-tutorial-v1', value: 'done' }] }] },
     launchOptions: { args: ['--autoplay-policy=no-user-gesture-required'] } },
   webServer: [
     { command: 'npm run start -- --port 4200', url: 'http://127.0.0.1:4200', reuseExistingServer: !process.env['CI'], timeout: 120000 },
