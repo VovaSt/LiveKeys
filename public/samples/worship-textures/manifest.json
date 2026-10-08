@@ -1,0 +1,370 @@
+{
+  "schemaVersion": 1,
+  "id": "worship-textures",
+  "version": "1",
+  "license": "MIT",
+  "demo": false,
+  "decodeSampleRate": 22050,
+  "zones": [
+    {
+      "id": "shimmer-pad-36",
+      "url": "samples/worship-textures/shimmer-pad-36.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "sampleSet": "shimmer-pad",
+      "rootNote": 36,
+      "velocityRange": [
+        1,
+        127
+      ],
+      "keyRange": [
+        0,
+        38
+      ],
+      "loop": {
+        "start": 1,
+        "end": 8
+      }
+    },
+    {
+      "id": "shimmer-pad-42",
+      "url": "samples/worship-textures/shimmer-pad-42.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "sampleSet": "shimmer-pad",
+      "rootNote": 42,
+      "velocityRange": [
+        1,
+        127
+      ],
+      "keyRange": [
+        39,
+        44
+      ],
+      "loop": {
+        "start": 1,
+        "end": 8
+      }
+    },
+    {
+      "id": "shimmer-pad-48",
+      "url": "samples/worship-textures/shimmer-pad-48.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "sampleSet": "shimmer-pad",
+      "rootNote": 48,
+      "velocityRange": [
+        1,
+        127
+      ],
+      "keyRange": [
+        45,
+        50
+      ],
+      "loop": {
+        "start": 1,
+        "end": 8
+      }
+    },
+    {
+      "id": "shimmer-pad-54",
+      "url": "samples/worship-textures/shimmer-pad-54.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "sampleSet": "shimmer-pad",
+      "rootNote": 54,
+      "velocityRange": [
+        1,
+        127
+      ],
+      "keyRange": [
+        51,
+        56
+      ],
+      "loop": {
+        "start": 1,
+        "end": 8
+      }
+    },
+    {
+      "id": "shimmer-pad-60",
+      "url": "samples/worship-textures/shimmer-pad-60.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "sampleSet": "shimmer-pad",
+      "rootNote": 60,
+      "velocityRange": [
+        1,
+        127
+      ],
+      "keyRange": [
+        57,
+        62
+      ],
+      "loop": {
+        "start": 1,
+        "end": 8
+      }
+    },
+    {
+      "id": "shimmer-pad-66",
+      "url": "samples/worship-textures/shimmer-pad-66.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "sampleSet": "shimmer-pad",
+      "rootNote": 66,
+      "velocityRange": [
+        1,
+        127
+      ],
+      "keyRange": [
+        63,
+        68
+      ],
+      "loop": {
+        "start": 1,
+        "end": 8
+      }
+    },
+    {
+      "id": "shimmer-pad-72",
+      "url": "samples/worship-textures/shimmer-pad-72.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "sampleSet": "shimmer-pad",
+      "rootNote": 72,
+      "velocityRange": [
+        1,
+        127
+      ],
+      "keyRange": [
+        69,
+        74
+      ],
+      "loop": {
+        "start": 1,
+        "end": 8
+      }
+    },
+    {
+      "id": "shimmer-pad-78",
+      "url": "samples/worship-textures/shimmer-pad-78.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "sampleSet": "shimmer-pad",
+      "rootNote": 78,
+      "velocityRange": [
+        1,
+        127
+      ],
+      "keyRange": [
+        75,
+        80
+      ],
+      "loop": {
+        "start": 1,
+        "end": 8
+      }
+    },
+    {
+      "id": "shimmer-pad-84",
+      "url": "samples/worship-textures/shimmer-pad-84.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "sampleSet": "shimmer-pad",
+      "rootNote": 84,
+      "velocityRange": [
+        1,
+        127
+      ],
+      "keyRange": [
+        81,
+        127
+      ],
+      "loop": {
+        "start": 1,
+        "end": 8
+      }
+    },
+    {
+      "id": "choir-bloom-36",
+      "url": "samples/worship-textures/choir-bloom-36.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "sampleSet": "choir-bloom",
+      "rootNote": 36,
+      "velocityRange": [
+        1,
+        127
+      ],
+      "keyRange": [
+        0,
+        38
+      ],
+      "loop": {
+        "start": 1,
+        "end": 8
+      }
+    },
+    {
+      "id": "choir-bloom-42",
+      "url": "samples/worship-textures/choir-bloom-42.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "sampleSet": "choir-bloom",
+      "rootNote": 42,
+      "velocityRange": [
+        1,
+        127
+      ],
+      "keyRange": [
+        39,
+        44
+      ],
+      "loop": {
+        "start": 1,
+        "end": 8
+      }
+    },
+    {
+      "id": "choir-bloom-48",
+      "url": "samples/worship-textures/choir-bloom-48.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "sampleSet": "choir-bloom",
+      "rootNote": 48,
+      "velocityRange": [
+        1,
+        127
+      ],
+      "keyRange": [
+        45,
+        50
+      ],
+      "loop": {
+        "start": 1,
+        "end": 8
+      }
+    },
+    {
+      "id": "choir-bloom-54",
+      "url": "samples/worship-textures/choir-bloom-54.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "sampleSet": "choir-bloom",
+      "rootNote": 54,
+      "velocityRange": [
+        1,
+        127
+      ],
+      "keyRange": [
+        51,
+        56
+      ],
+      "loop": {
+        "start": 1,
+        "end": 8
+      }
+    },
+    {
+      "id": "choir-bloom-60",
+      "url": "samples/worship-textures/choir-bloom-60.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "sampleSet": "choir-bloom",
+      "rootNote": 60,
+      "velocityRange": [
+        1,
+        127
+      ],
+      "keyRange": [
+        57,
+        62
+      ],
+      "loop": {
+        "start": 1,
+        "end": 8
+      }
+    },
+    {
+      "id": "choir-bloom-66",
+      "url": "samples/worship-textures/choir-bloom-66.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "sampleSet": "choir-bloom",
+      "rootNote": 66,
+      "velocityRange": [
+        1,
+        127
+      ],
+      "keyRange": [
+        63,
+        68
+      ],
+      "loop": {
+        "start": 1,
+        "end": 8
+      }
+    },
+    {
+      "id": "choir-bloom-72",
+      "url": "samples/worship-textures/choir-bloom-72.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "sampleSet": "choir-bloom",
+      "rootNote": 72,
+      "velocityRange": [
+        1,
+        127
+      ],
+      "keyRange": [
+        69,
+        74
+      ],
+      "loop": {
+        "start": 1,
+        "end": 8
+      }
+    },
+    {
+      "id": "choir-bloom-78",
+      "url": "samples/worship-textures/choir-bloom-78.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "sampleSet": "choir-bloom",
+      "rootNote": 78,
+      "velocityRange": [
+        1,
+        127
+      ],
+      "keyRange": [
+        75,
+        80
+      ],
+      "loop": {
+        "start": 1,
+        "end": 8
+      }
+    },
+    {
+      "id": "choir-bloom-84",
+      "url": "samples/worship-textures/choir-bloom-84.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "sampleSet": "choir-bloom",
+      "rootNote": 84,
+      "velocityRange": [
+        1,
+        127
+      ],
+      "keyRange": [
+        81,
+        127
+      ],
+      "loop": {
+        "start": 1,
+        "end": 8
+      }
+    }
+  ]
+}

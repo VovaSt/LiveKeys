@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ES2022", "module": "preserve", "moduleResolution": "bundler",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"], "strict": true,
+    "noImplicitOverride": true, "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true, "isolatedModules": true,
+    "experimentalDecorators": true, "skipLibCheck": true, "resolveJsonModule": true, "types": []
+  },
+  "angularCompilerOptions": { "strictTemplates": true, "strictInjectionParameters": true },
+  "include": ["src/**/*.ts", "tests/unit/**/*.ts"]
+}

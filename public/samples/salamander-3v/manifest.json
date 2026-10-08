@@ -1,0 +1,732 @@
+{
+  "schemaVersion": 1,
+  "id": "salamander-3v",
+  "version": "1",
+  "license": "CC-BY-3.0",
+  "demo": true,
+  "sourceRevision": "0cd2c034f820c53e83ab22f5c13bd490b9e4de85",
+  "decodeSampleRate": 22050,
+  "mono": true,
+  "zones": [
+    {
+      "id": "A0v4",
+      "url": "samples/salamander-3v/A0v4.mp3",
+      "rootNote": 21,
+      "keyRange": [
+        0,
+        24
+      ],
+      "velocityRange": [
+        1,
+        50
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "A0v9",
+      "url": "samples/salamander-3v/A0v9.mp3",
+      "rootNote": 21,
+      "keyRange": [
+        0,
+        24
+      ],
+      "velocityRange": [
+        51,
+        95
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "A0v15",
+      "url": "samples/salamander-3v/A0v15.mp3",
+      "rootNote": 21,
+      "keyRange": [
+        0,
+        24
+      ],
+      "velocityRange": [
+        96,
+        127
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "Ds1v4",
+      "url": "samples/salamander-3v/Ds1v4.mp3",
+      "rootNote": 27,
+      "keyRange": [
+        25,
+        30
+      ],
+      "velocityRange": [
+        1,
+        50
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "Ds1v9",
+      "url": "samples/salamander-3v/Ds1v9.mp3",
+      "rootNote": 27,
+      "keyRange": [
+        25,
+        30
+      ],
+      "velocityRange": [
+        51,
+        95
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "Ds1v15",
+      "url": "samples/salamander-3v/Ds1v15.mp3",
+      "rootNote": 27,
+      "keyRange": [
+        25,
+        30
+      ],
+      "velocityRange": [
+        96,
+        127
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "A1v4",
+      "url": "samples/salamander-3v/A1v4.mp3",
+      "rootNote": 33,
+      "keyRange": [
+        31,
+        36
+      ],
+      "velocityRange": [
+        1,
+        50
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "A1v9",
+      "url": "samples/salamander-3v/A1v9.mp3",
+      "rootNote": 33,
+      "keyRange": [
+        31,
+        36
+      ],
+      "velocityRange": [
+        51,
+        95
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "A1v15",
+      "url": "samples/salamander-3v/A1v15.mp3",
+      "rootNote": 33,
+      "keyRange": [
+        31,
+        36
+      ],
+      "velocityRange": [
+        96,
+        127
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "Ds2v4",
+      "url": "samples/salamander-3v/Ds2v4.mp3",
+      "rootNote": 39,
+      "keyRange": [
+        37,
+        42
+      ],
+      "velocityRange": [
+        1,
+        50
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "Ds2v9",
+      "url": "samples/salamander-3v/Ds2v9.mp3",
+      "rootNote": 39,
+      "keyRange": [
+        37,
+        42
+      ],
+      "velocityRange": [
+        51,
+        95
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "Ds2v15",
+      "url": "samples/salamander-3v/Ds2v15.mp3",
+      "rootNote": 39,
+      "keyRange": [
+        37,
+        42
+      ],
+      "velocityRange": [
+        96,
+        127
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "A2v4",
+      "url": "samples/salamander-3v/A2v4.mp3",
+      "rootNote": 45,
+      "keyRange": [
+        43,
+        48
+      ],
+      "velocityRange": [
+        1,
+        50
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "A2v9",
+      "url": "samples/salamander-3v/A2v9.mp3",
+      "rootNote": 45,
+      "keyRange": [
+        43,
+        48
+      ],
+      "velocityRange": [
+        51,
+        95
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "A2v15",
+      "url": "samples/salamander-3v/A2v15.mp3",
+      "rootNote": 45,
+      "keyRange": [
+        43,
+        48
+      ],
+      "velocityRange": [
+        96,
+        127
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "Ds3v4",
+      "url": "samples/salamander-3v/Ds3v4.mp3",
+      "rootNote": 51,
+      "keyRange": [
+        49,
+        54
+      ],
+      "velocityRange": [
+        1,
+        50
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "Ds3v9",
+      "url": "samples/salamander-3v/Ds3v9.mp3",
+      "rootNote": 51,
+      "keyRange": [
+        49,
+        54
+      ],
+      "velocityRange": [
+        51,
+        95
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "Ds3v15",
+      "url": "samples/salamander-3v/Ds3v15.mp3",
+      "rootNote": 51,
+      "keyRange": [
+        49,
+        54
+      ],
+      "velocityRange": [
+        96,
+        127
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "A3v4",
+      "url": "samples/salamander-3v/A3v4.mp3",
+      "rootNote": 57,
+      "keyRange": [
+        55,
+        60
+      ],
+      "velocityRange": [
+        1,
+        50
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "A3v9",
+      "url": "samples/salamander-3v/A3v9.mp3",
+      "rootNote": 57,
+      "keyRange": [
+        55,
+        60
+      ],
+      "velocityRange": [
+        51,
+        95
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "A3v15",
+      "url": "samples/salamander-3v/A3v15.mp3",
+      "rootNote": 57,
+      "keyRange": [
+        55,
+        60
+      ],
+      "velocityRange": [
+        96,
+        127
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "Ds4v4",
+      "url": "samples/salamander-3v/Ds4v4.mp3",
+      "rootNote": 63,
+      "keyRange": [
+        61,
+        66
+      ],
+      "velocityRange": [
+        1,
+        50
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "Ds4v9",
+      "url": "samples/salamander-3v/Ds4v9.mp3",
+      "rootNote": 63,
+      "keyRange": [
+        61,
+        66
+      ],
+      "velocityRange": [
+        51,
+        95
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "Ds4v15",
+      "url": "samples/salamander-3v/Ds4v15.mp3",
+      "rootNote": 63,
+      "keyRange": [
+        61,
+        66
+      ],
+      "velocityRange": [
+        96,
+        127
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "A4v4",
+      "url": "samples/salamander-3v/A4v4.mp3",
+      "rootNote": 69,
+      "keyRange": [
+        67,
+        72
+      ],
+      "velocityRange": [
+        1,
+        50
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "A4v9",
+      "url": "samples/salamander-3v/A4v9.mp3",
+      "rootNote": 69,
+      "keyRange": [
+        67,
+        72
+      ],
+      "velocityRange": [
+        51,
+        95
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "A4v15",
+      "url": "samples/salamander-3v/A4v15.mp3",
+      "rootNote": 69,
+      "keyRange": [
+        67,
+        72
+      ],
+      "velocityRange": [
+        96,
+        127
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "Ds5v4",
+      "url": "samples/salamander-3v/Ds5v4.mp3",
+      "rootNote": 75,
+      "keyRange": [
+        73,
+        78
+      ],
+      "velocityRange": [
+        1,
+        50
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "Ds5v9",
+      "url": "samples/salamander-3v/Ds5v9.mp3",
+      "rootNote": 75,
+      "keyRange": [
+        73,
+        78
+      ],
+      "velocityRange": [
+        51,
+        95
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "Ds5v15",
+      "url": "samples/salamander-3v/Ds5v15.mp3",
+      "rootNote": 75,
+      "keyRange": [
+        73,
+        78
+      ],
+      "velocityRange": [
+        96,
+        127
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "A5v4",
+      "url": "samples/salamander-3v/A5v4.mp3",
+      "rootNote": 81,
+      "keyRange": [
+        79,
+        84
+      ],
+      "velocityRange": [
+        1,
+        50
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "A5v9",
+      "url": "samples/salamander-3v/A5v9.mp3",
+      "rootNote": 81,
+      "keyRange": [
+        79,
+        84
+      ],
+      "velocityRange": [
+        51,
+        95
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "A5v15",
+      "url": "samples/salamander-3v/A5v15.mp3",
+      "rootNote": 81,
+      "keyRange": [
+        79,
+        84
+      ],
+      "velocityRange": [
+        96,
+        127
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "Ds6v4",
+      "url": "samples/salamander-3v/Ds6v4.mp3",
+      "rootNote": 87,
+      "keyRange": [
+        85,
+        90
+      ],
+      "velocityRange": [
+        1,
+        50
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "Ds6v9",
+      "url": "samples/salamander-3v/Ds6v9.mp3",
+      "rootNote": 87,
+      "keyRange": [
+        85,
+        90
+      ],
+      "velocityRange": [
+        51,
+        95
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "Ds6v15",
+      "url": "samples/salamander-3v/Ds6v15.mp3",
+      "rootNote": 87,
+      "keyRange": [
+        85,
+        90
+      ],
+      "velocityRange": [
+        96,
+        127
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "A6v4",
+      "url": "samples/salamander-3v/A6v4.mp3",
+      "rootNote": 93,
+      "keyRange": [
+        91,
+        96
+      ],
+      "velocityRange": [
+        1,
+        50
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "A6v9",
+      "url": "samples/salamander-3v/A6v9.mp3",
+      "rootNote": 93,
+      "keyRange": [
+        91,
+        96
+      ],
+      "velocityRange": [
+        51,
+        95
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "A6v15",
+      "url": "samples/salamander-3v/A6v15.mp3",
+      "rootNote": 93,
+      "keyRange": [
+        91,
+        96
+      ],
+      "velocityRange": [
+        96,
+        127
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "Ds7v4",
+      "url": "samples/salamander-3v/Ds7v4.mp3",
+      "rootNote": 99,
+      "keyRange": [
+        97,
+        102
+      ],
+      "velocityRange": [
+        1,
+        50
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "Ds7v9",
+      "url": "samples/salamander-3v/Ds7v9.mp3",
+      "rootNote": 99,
+      "keyRange": [
+        97,
+        102
+      ],
+      "velocityRange": [
+        51,
+        95
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "Ds7v15",
+      "url": "samples/salamander-3v/Ds7v15.mp3",
+      "rootNote": 99,
+      "keyRange": [
+        97,
+        102
+      ],
+      "velocityRange": [
+        96,
+        127
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "A7v4",
+      "url": "samples/salamander-3v/A7v4.mp3",
+      "rootNote": 105,
+      "keyRange": [
+        103,
+        106
+      ],
+      "velocityRange": [
+        1,
+        50
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "A7v9",
+      "url": "samples/salamander-3v/A7v9.mp3",
+      "rootNote": 105,
+      "keyRange": [
+        103,
+        106
+      ],
+      "velocityRange": [
+        51,
+        95
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "A7v15",
+      "url": "samples/salamander-3v/A7v15.mp3",
+      "rootNote": 105,
+      "keyRange": [
+        103,
+        106
+      ],
+      "velocityRange": [
+        96,
+        127
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "C8v4",
+      "url": "samples/salamander-3v/C8v4.mp3",
+      "rootNote": 108,
+      "keyRange": [
+        107,
+        127
+      ],
+      "velocityRange": [
+        1,
+        50
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "C8v9",
+      "url": "samples/salamander-3v/C8v9.mp3",
+      "rootNote": 108,
+      "keyRange": [
+        107,
+        127
+      ],
+      "velocityRange": [
+        51,
+        95
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    },
+    {
+      "id": "C8v15",
+      "url": "samples/salamander-3v/C8v15.mp3",
+      "rootNote": 108,
+      "keyRange": [
+        107,
+        127
+      ],
+      "velocityRange": [
+        96,
+        127
+      ],
+      "tuningCents": 0,
+      "gainDb": 0
+    }
+  ]
+}

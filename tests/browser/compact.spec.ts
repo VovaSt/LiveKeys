@@ -1,0 +1,88 @@
+import { expect, test } from '@playwright/test';
+for (const viewport of [{ width: 1280, height: 720 }, { width: 1366, height: 768 }]) {
+  test('four layers on one screen at ' + viewport.width, async ({ page }) => {
+    await page.setViewportSize(viewport); await page.goto('/');
+    for (let i = 0; i < 3; i++) await page.locator('.empty-layer').first().click();
+    await expect(page.locator('app-layer-editor')).toHaveCount(4);
+    await expect(page.locator('.keyboard .key')).toHaveCount(88);
+    await expect(page.locator('.keyboard .key:not(.black)')).toHaveCount(52);
+    await expect(page.locator('.keyboard .key').first()).toHaveAttribute('aria-label', 'A0');
+    await expect(page.locator('.keyboard .key').last()).toHaveAttribute('aria-label', 'C8');
+    const bounds = await page.locator('app-layer-editor').evaluateAll(nodes => nodes.map(node => {
+      const r = node.getBoundingClientRect(); return { top: r.top, right: r.right, bottom: r.bottom, left: r.left };
+    }));
+    expect(new Set(bounds.map(b => Math.round(b.top))).size).toBe(1);
+    expect(bounds[3]!.right).toBeLessThanOrEqual(viewport.width);
+    const screen = await page.evaluate(() => ({ height: document.documentElement.scrollHeight, width: document.documentElement.scrollWidth }));
+    expect(screen.height).toBeLessThanOrEqual(viewport.height); expect(screen.width).toBeLessThanOrEqual(viewport.width);
+    const keyboard = await page.locator('.keyboard').boundingBox(); expect(keyboard!.y + keyboard!.height).toBeLessThan(viewport.height);
+    await page.screenshot({ path: 'test-results/compact-' + viewport.width + '.png', fullPage: true });
+  });
+}
+test('effects add/remove, two-slot limit, bypass value retention and persisted state', async ({ page }) => {
+  await page.goto('/');
+  const layer = page.locator('app-layer-editor').first();
+  await expect(layer.locator('.effect-section')).toHaveCount(2);
+  await expect(layer.getByRole('button', { name: 'Додати ефект' })).toBeDisabled();
+  await layer.getByRole('button', { name: 'Прибрати Filter', exact: true }).click();
+  await layer.getByRole('button', { name: 'Додати ефект' }).click();
+  await layer.getByRole('button', { name: 'Chorus', exact: true }).click();
+  const chorus = layer.locator('[data-effect=chorus]');
+  await chorus.getByLabel('Chorus mix', { exact: true }).fill('0.65');
+  await chorus.getByRole('button', { name: 'Chorus: увімкнути або вимкнути' }).click();
+  await expect(chorus.getByRole('button', { name: 'Chorus: увімкнути або вимкнути' })).toHaveAttribute('aria-pressed', 'false');
+  await expect(chorus).not.toHaveClass(/effect-on/);
+  await expect(layer.getByRole('button', { name: 'Додати ефект' })).toBeDisabled();
+  await page.getByRole('button', { name: 'Зберегти як', exact: true }).click();
+  await page.getByRole('button', { name: 'Створити', exact: true }).click();
+  await expect(page.locator('.statusbar')).toContainText('Пресет збережено');
+  await page.reload();
+  await expect(chorus.getByLabel('Chorus mix', { exact: true })).toHaveValue('0.65');
+  await expect(chorus.getByRole('button', { name: 'Chorus: увімкнути або вимкнути' })).toHaveAttribute('aria-pressed', 'false');
+  await chorus.getByRole('button', { name: 'Chorus: увімкнути або вимкнути' }).click();
+  await expect(chorus).toHaveClass(/effect-on/);
+  await expect(chorus.getByLabel('Chorus mix', { exact: true })).toHaveValue('0.65');
+  await layer.getByRole('button', { name: 'Прибрати Reverb', exact: true }).click();
+  await layer.getByRole('button', { name: 'Додати ефект' }).click();
+  await layer.getByRole('button', { name: 'Delay', exact: true }).click();
+  await expect(layer.locator('[data-effect=delay]')).toHaveClass(/effect-on/);
+});
+test('Filter off bypasses the actual audio processing', async ({ page }) => {
+  await page.goto('http://127.0.0.1:4201/tests/browser/audio.html');
+  await page.waitForFunction('typeof window.renderFilterBypass === "function"');
+  const enabled = await page.evaluate('window.renderFilterBypass(true)') as number;
+  const bypass = await page.evaluate('window.renderFilterBypass(false)') as number;
+  expect(bypass).toBeGreaterThan(100);
+  expect(enabled).toBeLessThan(bypass * 0.001);
+});
+test('layer ranges align to white and black keys; only one global transpose remains', async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 720 }); await page.goto('/');
+  await page.getByLabel('Відкрити пресет', { exact: true }).selectOption('worship-warm');
+  const rows = page.locator('.range-row'), layers = page.locator('app-layer-editor');
+  for (let i = 0; i < 2; i++) await layers.nth(i).getByText('Ноти та динаміка', { exact: false }).click();
+  await layers.first().getByLabel('Ноти до (MIDI)', { exact: true }).fill('59');
+  await layers.first().getByLabel('Ноти до (MIDI)', { exact: true }).blur();
+  await layers.nth(1).getByLabel('Ноти від (MIDI)', { exact: true }).fill('60');
+  await layers.nth(1).getByLabel('Ноти від (MIDI)', { exact: true }).blur();
+  await expect(rows).toHaveCount(2);
+  const first = await rows.first().locator('.range-band').boundingBox();
+  const second = await rows.nth(1).locator('.range-band').boundingBox();
+  const c4 = await page.getByRole('button', { name: 'C4', exact: true }).boundingBox();
+  expect(first!.x + first!.width).toBeCloseTo(c4!.x, 0); expect(second!.x).toBeCloseTo(c4!.x, 0);
+  await layers.first().getByLabel('Ноти від (MIDI)', { exact: true }).fill('61');
+  await layers.first().getByLabel('Ноти від (MIDI)', { exact: true }).blur();
+  const sharp = await page.getByRole('button', { name: 'C♯4', exact: true }).boundingBox();
+  const band = await rows.first().locator('.range-band').boundingBox();
+  expect(band!.x).toBeCloseTo(sharp!.x, 0); expect(band!.width).toBeCloseTo(sharp!.width, 0);
+  await page.locator('header').getByLabel('Загальна транспозиція', { exact: true }).fill('7');
+  const unchanged = await rows.first().locator('.range-band').boundingBox();
+  expect(unchanged!.x).toBeCloseTo(band!.x, 0);
+  await expect(page.getByLabel('Загальна транспозиція', { exact: true })).toHaveCount(1);
+  await expect(layers.getByLabel('Транспозиція', { exact: true })).toHaveCount(0);
+  await layers.first().getByRole('button', { name: 'Mute', exact: true }).click();
+  await expect(rows.first()).toHaveClass(/range-inactive/);
+  await expect(layers.first().locator('.layer-buttons button')).toHaveCount(2);
+  await expect(page.getByRole('button', { name: 'Sustain для екранних клавіш' })).toHaveCount(0);
+  await expect(page.getByRole('button', { name: 'Зберегти', exact: true, includeHidden: true })).toHaveCount(1);
+  await page.screenshot({ path: 'test-results/layer-keyboard-ranges.png', fullPage: true });
+});

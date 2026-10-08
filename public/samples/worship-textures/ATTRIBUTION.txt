@@ -1,0 +1,3 @@
+FluidR3 samples, Copyright (c) 2000-2002, 2008 Frank Wen, MIT.
+Source and conversion provenance: ../fluid-ensemble/SOURCE.json and ATTRIBUTION.txt.
+LiveKeys adaptation: offline stereo layered samples with slow movement. Shimmer combines warm pad, octave air, and octave glass with baked echoes; Choir Bloom combines warm pad, choir, and subtle octave air. 9 roots each, 22050 Hz PCM16, 7 s crossfaded loops. No live shimmer DSP.

@@ -1,0 +1,20 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1, "newProjectRoot": "projects",
+  "projects": { "live-keys": {
+    "projectType": "application", "root": "", "sourceRoot": "src",
+    "architect": {
+      "build": { "builder": "@angular/build:application", "options": {
+        "browser": "src/main.ts", "tsConfig": "tsconfig.app.json",
+        "index": "src/index.html", "styles": ["src/styles.css"],
+        "assets": [{ "glob": "**/*", "input": "public" }], "outputPath": "dist/live-keys"
+      }, "configurations": {
+        "production": { "outputHashing": "all", "budgets": [{ "type": "initial", "maximumWarning": "600kB", "maximumError": "1MB" }] },
+        "development": { "optimization": false, "sourceMap": true, "extractLicenses": false }
+      }, "defaultConfiguration": "production" },
+      "serve": { "builder": "@angular/build:dev-server", "configurations": {
+        "development": { "buildTarget": "live-keys:build:development" }
+      }, "defaultConfiguration": "development" }
+    }
+  } }, "cli": { "analytics": false }
+}

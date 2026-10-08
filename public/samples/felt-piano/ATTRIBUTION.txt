@@ -1,0 +1,5 @@
+Fuchs & Mohr Felt Piano, recorded by Tom Guder. Public Domain, explicitly declared by the author:
+https://www.polyphone.io/en/forum/your-creations/850-acoustic-felt-piano-upright-fuchs-mohr
+Source: https://drive.google.com/file/d/1NCaVdQQyK4YbbA9ztrkBQYN8jpvbcQDG/view
+Original SF2 SHA256: cf6fdb8ff22a61732364659b341539ad4806d96616fb718917238bcd37bebc7f
+Adaptation: 16 roots, 3 recorded velocity layers, stereo downmix to mono, 22050 Hz PCM16, 15 Hz DC filter, peak reference normalization, 8-12 s maximum with 1 s end fade. No synthetic piano substitute. Original acoustic tuning retained (author notes slight detuning).

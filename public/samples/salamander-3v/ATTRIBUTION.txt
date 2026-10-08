@@ -1,0 +1,17 @@
+Salamander Grand Piano — Alexander Holm. Yamaha C5 recordings.
+Original: https://archive.org/details/SalamanderGrandPianoV3
+Source MP3s: https://github.com/tambien/Piano/tree/0cd2c034f820c53e83ab22f5c13bd490b9e4de85/audio
+License for recordings: CC BY 3.0 Unported
+https://creativecommons.org/licenses/by/3.0/
+https://creativecommons.org/licenses/by/3.0/legalcode
+Original license notice is also retained in UPSTREAM-README.txt.
+
+Live Keys compact three-velocity edition v1: 16 sampled roots, original dynamic
+layers v4, v9 and v15, full untrimmed decay. MP3 bytes remain unchanged.
+At runtime this edition is decoded at 22050 Hz and averaged to mono for a bounded
+PCM footprint, with each mono buffer peak-normalized to 0.7. New key/velocity mapping and performance envelopes are supplied
+by Live Keys. The three Grand presets are tonal variations of this ONE bank.
+No endorsement is implied. Retain attribution and license, including in mobile
+redistribution. No additional restrictions are imposed on these recordings.
+Audition and hardware acceptance are pending; compact edition is not a claim of
+full original Salamander fidelity or a final approved release library.

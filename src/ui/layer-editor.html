@@ -1,0 +1,60 @@
+<article class="layer-card" [class.layer-muted]="!layer().enabled || layer().mute">
+  <div class="layer-caption">
+    <span>ШАР {{ index() }}</span>
+    <div class="layer-buttons">
+      <button class="icon-button" aria-label="Mute" [attr.title]="!layer().enabled || layer().mute ? 'Mute — увімкнути звук шару' : 'Mute — заглушити шар'"
+        [attr.aria-pressed]="!layer().enabled || layer().mute" [class.active]="!layer().enabled || layer().mute" (click)="toggle('mute')">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11 5 6 9H3v6h3l5 4Z"/><path d="m16 9 5 6m0-6-5 6"/></svg>
+      </button>
+      <button class="icon-button" aria-label="Solo" [attr.title]="layer().solo ? 'Solo — вимкнути' : 'Solo — слухати лише цей шар'"
+        [attr.aria-pressed]="layer().solo" [class.active]="layer().solo" (click)="toggle('solo')">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 14v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="12" width="4" height="8" rx="2"/><rect x="17" y="12" width="4" height="8" rx="2"/></svg>
+      </button>
+    </div>
+    <button class="icon-button" [disabled]="!canRemove()" (click)="removed.emit()" [attr.aria-label]="t.removeLayer" [attr.title]="t.removeLayer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+  </div>
+  <div class="sound-select"><select [attr.aria-label]="t.sound" [value]="layer().instrument.id" (change)="instrument($event)">
+    @for (category of categories; track category.id) {
+      <optgroup [label]="category.name">
+        @for (instrument of category.instruments; track instrument.id) { <option [value]="instrument.id" [selected]="instrument.id === layer().instrument.id">{{ instrument.name }}</option> }
+      </optgroup>
+    }
+  </select><div class="sound-step"><button class="icon-button" aria-label="Попередній звук" title="Попередній звук" (click)="stepSound(-1)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg></button><button class="icon-button" aria-label="Наступний звук" title="Наступний звук" (click)="stepSound(1)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></div></div>
+  <div class="layer-scroll">
+    <div class="volume-pan">
+      <label class="slider-label"><span><span class="control-name" [attr.title]="t.layerVolume">{{ t.layerVolume }}</span><output>{{ layer().gainDb }} dB</output></span><input type="range" [attr.aria-label]="t.layerVolume" min="-60" max="0" step="1" [value]="layer().gainDb" (input)="numeric('gainDb', $event)"></label>
+      <label class="slider-label"><span><span class="control-name" [attr.title]="t.pan">{{ t.pan }}</span><output>{{ layer().pan }}</output></span><input type="range" [attr.aria-label]="t.pan" min="-1" max="1" step="0.05" [value]="layer().pan" (input)="numeric('pan', $event)"></label>
+    </div>
+    <app-effects-editor [layerMode]="true" [settings]="layer().effects" (changed)="effects($event)"></app-effects-editor>
+    @if (layer().instrument.definition.kind === 'synth' || layer().instrument.padDefaults) {
+      <details class="advanced-layer" open><summary>Характер звуку</summary>
+        <div class="layer-controls">
+          <label>{{ t.attack }} <output>{{ layer().pad.attack }} s</output><input type="range" min="0.001" max="5" step="0.001" [value]="layer().pad.attack" (input)="pad('attack', $event)"></label>
+          <label>{{ t.release }} <output>{{ layer().pad.release }} s</output><input type="range" min="0.05" max="10" step="0.05" [value]="layer().pad.release" (input)="pad('release', $event)"></label>
+          <label>{{ t.cutoff }} <output>{{ layer().pad.cutoff }} Hz</output><input type="range" [attr.aria-label]="t.cutoff" [attr.aria-valuetext]="layer().pad.cutoff + ' Hz'" min="0" max="1000" step="any" [value]="frequencyPosition(layer().pad.cutoff, 100, 12000)" (input)="pad('cutoff', $event)"></label>
+          @if (layer().instrument.definition.kind === 'synth') { <label>{{ t.movement }}<input type="range" min="0" max="1" step="0.05" [value]="layer().pad.movement" (input)="pad('movement', $event)"></label> }
+        </div>
+        @if (layer().instrument.definition.kind === 'synth') {
+          <button [attr.aria-pressed]="layer().mono" [class.active]="layer().mono" (click)="toggle('mono')">{{ t.mono }}</button>
+          @if (layer().mono) { <label>{{ t.glide }} <output>{{ layer().glide }} s</output><input type="range" min="0" max="1" step="0.01" [value]="layer().glide" (input)="numeric('glide', $event)"></label> }
+        }
+      </details>
+    }
+    <details class="advanced-layer"><summary>Ноти та динаміка <span>{{ noteName(layer().keyRange[0]) }}–{{ noteName(layer().keyRange[1]) }}</span></summary>
+      <label>Октава <output>{{ (layer().octave ?? 0) > 0 ? '+' : '' }}{{ layer().octave ?? 0 }}</output><input aria-label="Октава" type="range" min="-3" max="3" step="1" [value]="layer().octave ?? 0" (input)="numeric('octave', $event)"></label>
+      <div class="layer-controls">
+        <label>{{ t.keyLow }}<input type="number" min="0" max="127" step="1" [value]="layer().keyRange[0]" (change)="range('keyRange', 0, $event)"></label>
+        <label>{{ t.keyHigh }}<input type="number" min="0" max="127" step="1" [value]="layer().keyRange[1]" (change)="range('keyRange', 1, $event)"></label>
+        <label title="Плавне наростання гучності всередині діапазону від нижньої межі; 0 — без згладжування">Нижній край <output>{{ layer().keyFadeLow ?? 0 }} півт.</output><input aria-label="Нижній край" type="range" min="0" max="24" step="1" [value]="layer().keyFadeLow ?? 0" (input)="numeric('keyFadeLow', $event)"></label>
+        <label title="Плавне затухання гучності всередині діапазону до верхньої межі; 0 — без згладжування">Верхній край <output>{{ layer().keyFadeHigh ?? 0 }} півт.</output><input aria-label="Верхній край" type="range" min="0" max="24" step="1" [value]="layer().keyFadeHigh ?? 0" (input)="numeric('keyFadeHigh', $event)"></label>
+        <label>{{ t.velocityLow }}<input type="range" min="1" max="127" step="1" [value]="layer().velocityRange[0]" (input)="range('velocityRange', 0, $event)"><output>{{ layer().velocityRange[0] }}</output></label>
+        <label>{{ t.velocityHigh }}<input type="range" min="1" max="127" step="1" [value]="layer().velocityRange[1]" (input)="range('velocityRange', 1, $event)"><output>{{ layer().velocityRange[1] }}</output></label>
+      </div>
+      @if (layer().instrument.category === 'pad' || layer().instrument.category === 'dynamic') {
+        <label>Одночасні голоси <output>{{ layer().voiceLimit ?? 10 }}</output><input aria-label="Одночасні голоси" type="range" min="1" max="32" step="1" [value]="layer().voiceLimit ?? 10" (input)="numeric('voiceLimit', $event)"></label>
+      }
+      <label>{{ t.velocityCurve }}<select [attr.aria-label]="t.velocityCurve" [value]="layer().velocityCurve" (change)="curve($event)">
+        <option value="linear">{{ t.linear }}</option><option value="soft">{{ t.soft }}</option><option value="hard">{{ t.hard }}</option><option value="fixed">{{ t.fixed }}</option></select></label>
+    </details>
+  </div>
+</article>

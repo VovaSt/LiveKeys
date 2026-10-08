@@ -1,0 +1,5 @@
+FluidR3 samples: Copyright (c) 2000-2002, 2008 Frank Wen. MIT license.
+Source: https://github.com/surikov/webaudiofontdata/tree/23ca907d4370a04fd89ca483a92915e4d6159ab9
+WebAudioFont data conversion: Sergey Surikov (see included license). No WebAudioFont playback code is included.
+Adaptations: 22050 Hz PCM WAV, normalized mono zones with original loop timing and endpoint correction; offline stereo sample blends for Aurora/Ocean/Symphony.
+This is an adapted subset, not the full FluidR3 bank. See SOURCE.json and both license files.

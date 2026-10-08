@@ -1,0 +1,730 @@
+{
+  "schemaVersion": 1,
+  "id": "felt-piano",
+  "version": "1",
+  "license": "Public Domain",
+  "demo": false,
+  "decodeSampleRate": 22050,
+  "zones": [
+    {
+      "id": "p-21",
+      "url": "samples/felt-piano/p-21.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 21,
+      "velocityRange": [
+        1,
+        50
+      ],
+      "keyRange": [
+        0,
+        24
+      ]
+    },
+    {
+      "id": "m-21",
+      "url": "samples/felt-piano/m-21.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 21,
+      "velocityRange": [
+        51,
+        94
+      ],
+      "keyRange": [
+        0,
+        24
+      ]
+    },
+    {
+      "id": "f-21",
+      "url": "samples/felt-piano/f-21.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 21,
+      "velocityRange": [
+        95,
+        127
+      ],
+      "keyRange": [
+        0,
+        24
+      ]
+    },
+    {
+      "id": "p-27",
+      "url": "samples/felt-piano/p-27.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 27,
+      "velocityRange": [
+        1,
+        50
+      ],
+      "keyRange": [
+        25,
+        30
+      ]
+    },
+    {
+      "id": "m-27",
+      "url": "samples/felt-piano/m-27.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 27,
+      "velocityRange": [
+        51,
+        94
+      ],
+      "keyRange": [
+        25,
+        30
+      ]
+    },
+    {
+      "id": "f-27",
+      "url": "samples/felt-piano/f-27.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 27,
+      "velocityRange": [
+        95,
+        127
+      ],
+      "keyRange": [
+        25,
+        30
+      ]
+    },
+    {
+      "id": "p-33",
+      "url": "samples/felt-piano/p-33.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 33,
+      "velocityRange": [
+        1,
+        50
+      ],
+      "keyRange": [
+        31,
+        36
+      ]
+    },
+    {
+      "id": "m-33",
+      "url": "samples/felt-piano/m-33.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 33,
+      "velocityRange": [
+        51,
+        94
+      ],
+      "keyRange": [
+        31,
+        36
+      ]
+    },
+    {
+      "id": "f-33",
+      "url": "samples/felt-piano/f-33.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 33,
+      "velocityRange": [
+        95,
+        127
+      ],
+      "keyRange": [
+        31,
+        36
+      ]
+    },
+    {
+      "id": "p-39",
+      "url": "samples/felt-piano/p-39.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 39,
+      "velocityRange": [
+        1,
+        50
+      ],
+      "keyRange": [
+        37,
+        42
+      ]
+    },
+    {
+      "id": "m-39",
+      "url": "samples/felt-piano/m-39.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 39,
+      "velocityRange": [
+        51,
+        94
+      ],
+      "keyRange": [
+        37,
+        42
+      ]
+    },
+    {
+      "id": "f-39",
+      "url": "samples/felt-piano/f-39.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 39,
+      "velocityRange": [
+        95,
+        127
+      ],
+      "keyRange": [
+        37,
+        42
+      ]
+    },
+    {
+      "id": "p-45",
+      "url": "samples/felt-piano/p-45.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 45,
+      "velocityRange": [
+        1,
+        50
+      ],
+      "keyRange": [
+        43,
+        48
+      ]
+    },
+    {
+      "id": "m-45",
+      "url": "samples/felt-piano/m-45.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 45,
+      "velocityRange": [
+        51,
+        94
+      ],
+      "keyRange": [
+        43,
+        48
+      ]
+    },
+    {
+      "id": "f-45",
+      "url": "samples/felt-piano/f-45.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 45,
+      "velocityRange": [
+        95,
+        127
+      ],
+      "keyRange": [
+        43,
+        48
+      ]
+    },
+    {
+      "id": "p-51",
+      "url": "samples/felt-piano/p-51.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 51,
+      "velocityRange": [
+        1,
+        50
+      ],
+      "keyRange": [
+        49,
+        54
+      ]
+    },
+    {
+      "id": "m-51",
+      "url": "samples/felt-piano/m-51.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 51,
+      "velocityRange": [
+        51,
+        94
+      ],
+      "keyRange": [
+        49,
+        54
+      ]
+    },
+    {
+      "id": "f-51",
+      "url": "samples/felt-piano/f-51.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 51,
+      "velocityRange": [
+        95,
+        127
+      ],
+      "keyRange": [
+        49,
+        54
+      ]
+    },
+    {
+      "id": "p-57",
+      "url": "samples/felt-piano/p-57.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 57,
+      "velocityRange": [
+        1,
+        50
+      ],
+      "keyRange": [
+        55,
+        60
+      ]
+    },
+    {
+      "id": "m-57",
+      "url": "samples/felt-piano/m-57.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 57,
+      "velocityRange": [
+        51,
+        94
+      ],
+      "keyRange": [
+        55,
+        60
+      ]
+    },
+    {
+      "id": "f-57",
+      "url": "samples/felt-piano/f-57.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 57,
+      "velocityRange": [
+        95,
+        127
+      ],
+      "keyRange": [
+        55,
+        60
+      ]
+    },
+    {
+      "id": "p-63",
+      "url": "samples/felt-piano/p-63.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 63,
+      "velocityRange": [
+        1,
+        50
+      ],
+      "keyRange": [
+        61,
+        66
+      ]
+    },
+    {
+      "id": "m-63",
+      "url": "samples/felt-piano/m-63.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 63,
+      "velocityRange": [
+        51,
+        94
+      ],
+      "keyRange": [
+        61,
+        66
+      ]
+    },
+    {
+      "id": "f-63",
+      "url": "samples/felt-piano/f-63.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 63,
+      "velocityRange": [
+        95,
+        127
+      ],
+      "keyRange": [
+        61,
+        66
+      ]
+    },
+    {
+      "id": "p-69",
+      "url": "samples/felt-piano/p-69.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 69,
+      "velocityRange": [
+        1,
+        50
+      ],
+      "keyRange": [
+        67,
+        72
+      ]
+    },
+    {
+      "id": "m-69",
+      "url": "samples/felt-piano/m-69.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 69,
+      "velocityRange": [
+        51,
+        94
+      ],
+      "keyRange": [
+        67,
+        72
+      ]
+    },
+    {
+      "id": "f-69",
+      "url": "samples/felt-piano/f-69.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 69,
+      "velocityRange": [
+        95,
+        127
+      ],
+      "keyRange": [
+        67,
+        72
+      ]
+    },
+    {
+      "id": "p-75",
+      "url": "samples/felt-piano/p-75.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 75,
+      "velocityRange": [
+        1,
+        50
+      ],
+      "keyRange": [
+        73,
+        78
+      ]
+    },
+    {
+      "id": "m-75",
+      "url": "samples/felt-piano/m-75.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 75,
+      "velocityRange": [
+        51,
+        94
+      ],
+      "keyRange": [
+        73,
+        78
+      ]
+    },
+    {
+      "id": "f-75",
+      "url": "samples/felt-piano/f-75.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 75,
+      "velocityRange": [
+        95,
+        127
+      ],
+      "keyRange": [
+        73,
+        78
+      ]
+    },
+    {
+      "id": "p-81",
+      "url": "samples/felt-piano/p-81.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 81,
+      "velocityRange": [
+        1,
+        50
+      ],
+      "keyRange": [
+        79,
+        84
+      ]
+    },
+    {
+      "id": "m-81",
+      "url": "samples/felt-piano/m-81.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 81,
+      "velocityRange": [
+        51,
+        94
+      ],
+      "keyRange": [
+        79,
+        84
+      ]
+    },
+    {
+      "id": "f-81",
+      "url": "samples/felt-piano/f-81.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 81,
+      "velocityRange": [
+        95,
+        127
+      ],
+      "keyRange": [
+        79,
+        84
+      ]
+    },
+    {
+      "id": "p-87",
+      "url": "samples/felt-piano/p-87.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 87,
+      "velocityRange": [
+        1,
+        50
+      ],
+      "keyRange": [
+        85,
+        90
+      ]
+    },
+    {
+      "id": "m-87",
+      "url": "samples/felt-piano/m-87.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 87,
+      "velocityRange": [
+        51,
+        94
+      ],
+      "keyRange": [
+        85,
+        90
+      ]
+    },
+    {
+      "id": "f-87",
+      "url": "samples/felt-piano/f-87.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 87,
+      "velocityRange": [
+        95,
+        127
+      ],
+      "keyRange": [
+        85,
+        90
+      ]
+    },
+    {
+      "id": "p-93",
+      "url": "samples/felt-piano/p-93.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 93,
+      "velocityRange": [
+        1,
+        50
+      ],
+      "keyRange": [
+        91,
+        96
+      ]
+    },
+    {
+      "id": "m-93",
+      "url": "samples/felt-piano/m-93.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 93,
+      "velocityRange": [
+        51,
+        94
+      ],
+      "keyRange": [
+        91,
+        96
+      ]
+    },
+    {
+      "id": "f-93",
+      "url": "samples/felt-piano/f-93.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 93,
+      "velocityRange": [
+        95,
+        127
+      ],
+      "keyRange": [
+        91,
+        96
+      ]
+    },
+    {
+      "id": "p-99",
+      "url": "samples/felt-piano/p-99.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 99,
+      "velocityRange": [
+        1,
+        50
+      ],
+      "keyRange": [
+        97,
+        102
+      ]
+    },
+    {
+      "id": "m-99",
+      "url": "samples/felt-piano/m-99.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 99,
+      "velocityRange": [
+        51,
+        94
+      ],
+      "keyRange": [
+        97,
+        102
+      ]
+    },
+    {
+      "id": "f-99",
+      "url": "samples/felt-piano/f-99.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 99,
+      "velocityRange": [
+        95,
+        127
+      ],
+      "keyRange": [
+        97,
+        102
+      ]
+    },
+    {
+      "id": "p-105",
+      "url": "samples/felt-piano/p-105.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 105,
+      "velocityRange": [
+        1,
+        50
+      ],
+      "keyRange": [
+        103,
+        106
+      ]
+    },
+    {
+      "id": "m-105",
+      "url": "samples/felt-piano/m-105.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 105,
+      "velocityRange": [
+        51,
+        94
+      ],
+      "keyRange": [
+        103,
+        106
+      ]
+    },
+    {
+      "id": "f-105",
+      "url": "samples/felt-piano/f-105.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 105,
+      "velocityRange": [
+        95,
+        127
+      ],
+      "keyRange": [
+        103,
+        106
+      ]
+    },
+    {
+      "id": "p-108",
+      "url": "samples/felt-piano/p-108.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 108,
+      "velocityRange": [
+        1,
+        50
+      ],
+      "keyRange": [
+        107,
+        127
+      ]
+    },
+    {
+      "id": "m-108",
+      "url": "samples/felt-piano/m-108.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 108,
+      "velocityRange": [
+        51,
+        94
+      ],
+      "keyRange": [
+        107,
+        127
+      ]
+    },
+    {
+      "id": "f-108",
+      "url": "samples/felt-piano/f-108.wav",
+      "tuningCents": 0,
+      "gainDb": 0,
+      "rootNote": 108,
+      "velocityRange": [
+        95,
+        127
+      ],
+      "keyRange": [
+        107,
+        127
+      ]
+    }
+  ]
+}

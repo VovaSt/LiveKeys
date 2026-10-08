@@ -1,0 +1,26 @@
+{
+  "name": "live-keys", "version": "0.3.0", "private": true, "type": "module",
+  "engines": { "node": ">=24.15.0 <25" },
+  "scripts": {
+    "start": "ng serve --host 127.0.0.1",
+    "build": "ng build",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "lint": "eslint src tests",
+    "test": "vitest run",
+    "test:browser": "playwright test",
+    "samples:verify": "node scripts/piano-3v.mjs && node scripts/fluid-verify.mjs && node scripts/worship-verify.mjs",
+    "samples:worship": "node scripts/worship-build.mjs && node scripts/worship-verify.mjs",
+    "samples:fluid": "node scripts/fluid-download.mjs && node scripts/fluid-build.mjs && node scripts/fluid-verify.mjs",
+    "samples:fetch": "node scripts/piano-3v.mjs --fetch"
+  },
+  "dependencies": {
+    "@angular/common": "22.2.1", "@angular/compiler": "22.2.1",
+    "@angular/core": "22.2.1", "@angular/platform-browser": "22.2.1",
+    "rxjs": "~7.8.2", "tslib": "^2.8.1"
+  },
+  "devDependencies": {
+    "@angular/build": "22.2.1", "@angular/cli": "22.2.1", "@angular/compiler-cli": "22.2.1",
+    "typescript": "~6.0.0", "vitest": "^4.0.0", "@playwright/test": "^1.56.0",
+    "eslint": "^9.39.0", "@eslint/js": "^9.39.0", "typescript-eslint": "^8.57.0"
+  }
+}

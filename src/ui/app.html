@@ -1,0 +1,142 @@
+<main class="workspace">
+  <header class="topbar">
+    <h1>Live<span>Keys</span></h1>
+    <button class="primary" (click)="start()" [disabled]="busy() || restoring() || (info().ready && info().state === 'running')">
+      {{ busy() ? t.loading : info().ready ? (info().state === 'running' ? t.ready : t.resume) : t.start }}
+    </button>
+    <button class="midi-button" (click)="midiDialog.showModal()" [class.active]="midiConnected()"><i class="dot" [class.on]="activity() || midiConnected()"></i>MIDI</button>
+    <div class="master"><label for="master">{{ t.master }} <output>{{ masterDb() <= -60 ? t.silence : masterDb() + ' dB' }}</output></label>
+      <div class="master-slider"><input id="master" type="range" min="-60" max="0" step="1" [disabled]="restoring()" [value]="masterDb()" (input)="volume($event)"><span class="master-level" aria-hidden="true" [style.width.%]="masterLevel()"></span></div>
+    </div>
+    <meter class="sr-only" [attr.aria-label]="t.post" min="0" max="1" high="0.95" [value]="info().peakAfter"></meter>
+    <label class="global-transpose">{{ t.globalTranspose }} <output>{{ globalTranspose() > 0 ? '+' : '' }}{{ globalTranspose() }}</output>
+      <input type="range" [attr.aria-label]="t.globalTranspose" min="-12" max="12" step="1" [disabled]="restoring()" [value]="globalTranspose()" (input)="transpose($event)">
+    </label>
+    <div class="header-actions">
+      <button (click)="settingsDialog.showModal()">Налаштування</button>
+      <button class="panic" (click)="panic()">{{ t.panic }}</button>
+    </div>
+  </header>
+  <section class="preset-bar">
+    <fieldset [disabled]="restoring() || busy() || storageBusy()" class="preset-select">
+      <label class="sr-only" for="preset-select">{{ t.openPreset }}</label>
+      <select id="preset-select" [attr.aria-label]="t.openPreset" [value]="preset().id" (change)="choosePreset($event)">
+        @for (p of factories; track p.id) { <option [value]="p.id" [selected]="p.id === preset().id">{{ p.name }}</option> }
+        @for (p of savedPresets(); track p.id; let i = $index) { <option [value]="p.id" [selected]="p.id === preset().id">{{ factories.length + i + 1 }} · {{ presetDisplayName(p.name) }}</option> }
+      </select>
+      <button [attr.aria-label]="t.save" [disabled]="!isUserPreset()" title="Перезаписати користувацький пресет" (click)="save()">{{ t.save }}{{ dirty() ? ' •' : '' }}</button>
+      <button (click)="beginSaveAs()">Зберегти як</button>
+      <button class="icon-button" aria-label="Керування пресетами" (click)="presetsDialog.showModal()"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg></button>
+    </fieldset>
+    @if (newPresetName() !== null) {
+      <form class="save-as-inline" (submit)="$event.preventDefault(); save(true)">
+        <input aria-label="Назва нового пресету" maxlength="80" required [value]="newPresetName()" (input)="newPresetName.set($any($event.target).value)">
+        <button type="submit" [disabled]="storageBusy() || busy() || !newPresetName()?.trim()">Створити</button>
+        <button type="button" class="icon-button" aria-label="Скасувати створення пресету" (click)="newPresetName.set(null)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+      </form>
+    }
+    <span class="layer-count">{{ t.layers }} {{ preset().layers.length }}/4</span>
+  </section>
+  <section class="layers-area" aria-label="Шари інструментів">
+    <fieldset class="layers-grid" [disabled]="busy() || restoring() || storageBusy()">
+      @for (layer of preset().layers; track layer.id; let i = $index) {
+        <app-layer-editor [index]="i + 1" [layer]="layer" [canRemove]="preset().layers.length > 1"
+          [style.--layer-color]="layerColors[i]" (changed)="editLayer($event)" (removed)="removeLayer(layer.id)"></app-layer-editor>
+      }
+      @for (slot of [0, 1, 2, 3]; track slot) {
+        @if (slot >= preset().layers.length) {
+          <button class="empty-layer" (click)="addLayer()" [attr.aria-label]="'Додати інструмент у шар ' + (slot + 1)"><span>+</span><strong>Додати інструмент</strong><small>Шар {{ slot + 1 }}</small></button>
+        }
+      }
+    </fieldset>
+  </section>
+  <section class="keyboard-panel" [attr.aria-label]="t.keys">
+    <div class="keyboard-scroll"><div class="keyboard-layout">
+      <div class="layer-ranges" aria-label="Діапазони шарів на клавіатурі">
+        @for (range of rangeRows(); track range.id) {
+          <div class="range-row" [class.range-inactive]="!range.audible" [attr.aria-label]="range.label" [attr.title]="range.label" [style.--layer-color]="range.color">
+            @if (range.width > 0) {
+              <div class="range-band" [style.left.%]="range.left" [style.width.%]="range.width" [style.--range-mask]="range.fadeMask"><span>{{ range.index }} · {{ range.name }}</span></div>
+            } @else { <small>{{ range.index }} · поза A0–C8</small> }
+          </div>
+        }
+      </div>
+      <div class="keyboard">
+      @for (key of keys; track key.note) {
+        <button class="key" [class.black]="key.black" [class.pressed]="notes().includes(key.note)"
+          [style.left.%]="key.left" [style.width.%]="key.width" [attr.aria-label]="key.label" [attr.aria-pressed]="notes().includes(key.note)"
+          [disabled]="!info().ready || info().state !== 'running'"
+          (pointerdown)="pointerDown(key.note, $event)" (pointerup)="pointerUp($event)"
+          (pointercancel)="pointerUp($event)" (lostpointercapture)="pointerUp($event)"
+          (keydown)="keyButton(key.note, $event, true)" (keyup)="keyButton(key.note, $event, false)" (blur)="blurButton(key.note)"><span>{{ key.label }}</span></button>
+      }
+
+    </div></div></div>
+  </section>
+  <footer class="statusbar">
+    <span class="audio-load" [class.overloaded]="info().audioOverloaded" [class.inactive]="info().state !== 'running'" [attr.title]="info().audioLoadSource === 'playback' ? 'Збої аудіовиходу за статистикою браузера. Це не відсоток CPU.' : 'Приблизне виявлення затримок аудіорушія. Браузер не надає відсоток CPU; короткі збої можуть не виявлятися.'"><i class="dot"></i>Аудіо CPU: {{ info().state !== 'running' ? '—' : info().audioOverloaded ? 'збої' : 'стабільно' }}{{ info().audioLoadSource === 'estimate' ? ' ≈' : '' }}</span>
+    <span><i class="dot" [class.on]="info().state === 'running'"></i>{{ audioState }}</span>
+    <span>{{ t.voices }} <strong data-testid="voices">{{ info().voices }}</strong>/{{ info().voiceLimit }}</span>
+    @if (info().stolenVoices) { <span title="Кількість голосів, завершених через ліміт поліфонії за час роботи рушія">Витіснено: {{ info().stolenVoices }}</span> }
+    <span class="status-message" role="status">{{ dirty() ? (storageStatus() || notice()) : (notice() || storageStatus()) }}</span>
+    @if (dirty()) { <span class="dirty" [attr.aria-label]="t.dirty">Не збережено</span> }
+  </footer>
+  @if (error() || storageError() || importError()) {
+    <div class="error-banner" role="alert">{{ error() || storageError() || importError() }}</div>
+  }
+</main>
+<dialog #midiDialog aria-labelledby="midi-title">
+  <div class="dialog-heading"><h2 id="midi-title">{{ t.midi }}</h2><button class="icon-button" aria-label="Закрити MIDI" (click)="midiDialog.close()"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
+  <p>{{ t.midiHelp }}</p><button class="primary" (click)="connectMidi()" [disabled]="midiBusy()">{{ midiBusy() ? t.midiBusy : t.allowMidi }}</button>
+  @if (midiError()) { <p class="error" role="alert">{{ midiError() }}</p> }
+  @if (midiConnected() && !inputs().length) { <p>{{ t.noInputs }}</p> }
+  <div class="inputs">@for (input of inputs(); track input.id) {
+    <label><input type="checkbox" [checked]="input.selected" (change)="selectInput(input.id, $event)"><span>{{ input.name }}<small>{{ input.manufacturer }}</small></span></label>
+  }</div><p>{{ t.pedal }}: {{ pedals() }}</p>
+</dialog>
+<dialog #presetsDialog aria-labelledby="presets-title">
+  <div class="dialog-heading"><h2 id="presets-title">Мої пресети</h2><button class="icon-button" aria-label="Закрити пресети" (click)="presetsDialog.close()"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
+  <fieldset [disabled]="restoring() || busy() || storageBusy()">
+    <label>{{ t.presetName }}<input type="text" maxlength="80" required [value]="preset().name" (change)="rename($event)"></label>
+    <div class="inline-controls">
+      <button [disabled]="!isUserPreset()" (click)="deleting.set(true)">{{ t.delete }}</button></div>
+    <div class="inline-controls"><button (click)="exportPresets()">{{ t.export }}</button>
+      <label class="file-label">{{ t.import }}<input type="file" accept=".json,application/json" (change)="importPresets($event)"></label></div>
+  </fieldset>
+  <p class="small" role="status">{{ storageStatus() }}</p>
+  <p class="small" role="status">{{ notice() }}</p>
+  @if (storageError() || importError()) { <p class="error" role="alert">{{ storageError() || importError() }}</p> }
+  @if (deleting()) { <div class="confirm"><p>{{ t.confirmDelete }}</p><button [disabled]="storageBusy()" (click)="deletePreset()">{{ t.delete }}</button><button class="icon-button" [attr.aria-label]="t.cancel" [attr.title]="t.cancel" (click)="deleting.set(false)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div> }
+  <p class="small">{{ t.presetHelp }}</p>
+</dialog>
+<dialog #settingsDialog aria-labelledby="settings-title">
+  <div class="dialog-heading"><h2 id="settings-title">Налаштування</h2><button class="icon-button" aria-label="Закрити налаштування" (click)="settingsDialog.close()"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
+  <fieldset [disabled]="busy() || restoring() || storageBusy()"><app-effects-editor [settings]="preset().effects" (changed)="editEffects($event)"></app-effects-editor></fieldset>
+  <div class="settings-grid">
+    <label>{{ t.profile }}<select id="voices" [disabled]="restoring()" [value]="voiceLimit()" (change)="profile($event)"><option value="64">{{ t.normal }}</option><option value="32">{{ t.low }}</option></select></label>
+  </div>
+  <button [disabled]="restoring()" [attr.aria-pressed]="outputMono()" [class.active]="outputMono()" (click)="toggleOutput()">{{ t.outputMono }}</button>
+  @if (error()) { <p class="error" role="alert">{{ error() }}</p> }
+  <details class="panel"><summary>{{ t.banks }}</summary><p>{{ t.bankHelp }}</p>
+    @for (id of bankIds; track id) {
+      <div class="bank-row"><strong>{{ bankNames[id] }}</strong><span>{{ bankState(id) }}</span>
+        <button [disabled]="busy() || restoring() || bankStates().get(id) === 'ready'" (click)="loadBank(id)">{{ t.loadBank }}</button>
+      </div>
+    }
+
+  </details>
+  <details class="panel"><summary>{{ t.diagnostics }}</summary><dl>
+    <div><dt>{{ t.samples }}</dt><dd>{{ info().assets }}</dd></div>
+    <div><dt>{{ t.memory }}</dt><dd>{{ (info().pcmBytes / 1048576).toFixed(1) }} MiB</dd></div>
+    <div><dt>{{ t.effectsMemory }}</dt><dd>{{ ((info().effectsBytes ?? 0) / 1048576).toFixed(1) }} MiB</dd></div>
+    <div><dt>{{ t.rate }}</dt><dd>{{ info().sampleRate || '—' }} Hz</dd></div>
+    <div><dt>{{ t.baseLatency }}</dt><dd>{{ ms(info().baseLatency) }}</dd></div>
+    <div><dt>{{ t.outputLatency }}</dt><dd>{{ ms(info().outputLatency) }}</dd></div>
+  </dl><p>{{ t.latencyHelp }}</p><p>{{ t.outputHelp }}</p></details>
+
+  <p class="small">{{ t.protection }} {{ t.hardware }} {{ t.offline }}</p>
+  <a href="samples/salamander-3v/ATTRIBUTION.txt" target="_blank" rel="noopener">{{ t.attribution }}</a>
+  <a href="samples/fluid-ensemble/ATTRIBUTION.txt" target="_blank" rel="noopener">FluidR3 · джерело та ліцензії</a>
+  <a href="samples/felt-piano/ATTRIBUTION.txt" target="_blank" rel="noopener">Felt Piano · джерело та ліцензія</a>
+  <a href="samples/worship-textures/ATTRIBUTION.txt" target="_blank" rel="noopener">Worship-педи · джерело та ліцензії</a>
+</dialog>

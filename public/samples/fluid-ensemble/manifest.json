@@ -1,0 +1,1611 @@
+{
+    "schemaVersion":  1,
+    "id":  "fluid-ensemble",
+    "version":  "1",
+    "license":  "MIT",
+    "demo":  false,
+    "decodeSampleRate":  22050,
+    "sourceRevision":  "23ca907d4370a04fd89ca483a92915e4d6159ab9",
+    "zones":  [
+                  {
+                      "id":  "48-1-0",
+                      "sampleSet":  "48",
+                      "url":  "samples/fluid-ensemble/48-1.wav",
+                      "rootNote":  31,
+                      "keyRange":  [
+                                       0,
+                                       31
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  1.5019501133786848,
+                                   "end":  3.328526077097506
+                               }
+                  },
+                  {
+                      "id":  "48-3-32",
+                      "sampleSet":  "48",
+                      "url":  "samples/fluid-ensemble/48-3.wav",
+                      "rootNote":  34,
+                      "keyRange":  [
+                                       32,
+                                       34
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  0.6924716553287982,
+                                   "end":  2.2770521541950113
+                               }
+                  },
+                  {
+                      "id":  "48-5-35",
+                      "sampleSet":  "48",
+                      "url":  "samples/fluid-ensemble/48-5.wav",
+                      "rootNote":  37,
+                      "keyRange":  [
+                                       35,
+                                       37
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  1.1889795918367347,
+                                   "end":  2.8903854875283446
+                               }
+                  },
+                  {
+                      "id":  "48-7-38",
+                      "sampleSet":  "48",
+                      "url":  "samples/fluid-ensemble/48-7.wav",
+                      "rootNote":  40,
+                      "keyRange":  [
+                                       38,
+                                       40
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  1.134784580498866,
+                                   "end":  2.07718820861678
+                               }
+                  },
+                  {
+                      "id":  "48-9-41",
+                      "sampleSet":  "48",
+                      "url":  "samples/fluid-ensemble/48-9.wav",
+                      "rootNote":  43,
+                      "keyRange":  [
+                                       41,
+                                       43
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  1.014965986394558,
+                                   "end":  3.219455782312925
+                               }
+                  },
+                  {
+                      "id":  "48-11-44",
+                      "sampleSet":  "48",
+                      "url":  "samples/fluid-ensemble/48-11.wav",
+                      "rootNote":  47,
+                      "keyRange":  [
+                                       44,
+                                       47
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  0.8029478458049887,
+                                   "end":  2.850793650793651
+                               }
+                  },
+                  {
+                      "id":  "48-13-48",
+                      "sampleSet":  "48",
+                      "url":  "samples/fluid-ensemble/48-13.wav",
+                      "rootNote":  49,
+                      "keyRange":  [
+                                       48,
+                                       51
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  1.0827210884353742,
+                                   "end":  3.0509750566893423
+                               }
+                  },
+                  {
+                      "id":  "48-15-52",
+                      "sampleSet":  "48",
+                      "url":  "samples/fluid-ensemble/48-15.wav",
+                      "rootNote":  52,
+                      "keyRange":  [
+                                       52,
+                                       54
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  1.5931065759637189,
+                                   "end":  3.2517913832199548
+                               }
+                  },
+                  {
+                      "id":  "48-17-55",
+                      "sampleSet":  "48",
+                      "url":  "samples/fluid-ensemble/48-17.wav",
+                      "rootNote":  58,
+                      "keyRange":  [
+                                       55,
+                                       59
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  1.8331065759637188,
+                                   "end":  3.671700680272109
+                               }
+                  },
+                  {
+                      "id":  "48-19-60",
+                      "sampleSet":  "48",
+                      "url":  "samples/fluid-ensemble/48-19.wav",
+                      "rootNote":  61,
+                      "keyRange":  [
+                                       60,
+                                       62
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  0.57718820861678,
+                                   "end":  2.6095691609977325
+                               }
+                  },
+                  {
+                      "id":  "48-21-63",
+                      "sampleSet":  "48",
+                      "url":  "samples/fluid-ensemble/48-21.wav",
+                      "rootNote":  64,
+                      "keyRange":  [
+                                       63,
+                                       65
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  0.9721995464852607,
+                                   "end":  3.4458956916099774
+                               }
+                  },
+                  {
+                      "id":  "48-23-66",
+                      "sampleSet":  "48",
+                      "url":  "samples/fluid-ensemble/48-23.wav",
+                      "rootNote":  67,
+                      "keyRange":  [
+                                       66,
+                                       68
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  1.1307936507936507,
+                                   "end":  1.8909297052154195
+                               }
+                  },
+                  {
+                      "id":  "48-25-69",
+                      "sampleSet":  "48",
+                      "url":  "samples/fluid-ensemble/48-25.wav",
+                      "rootNote":  70,
+                      "keyRange":  [
+                                       69,
+                                       71
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  1.2824036281179139,
+                                   "end":  2.647392290249433
+                               }
+                  },
+                  {
+                      "id":  "48-27-72",
+                      "sampleSet":  "48",
+                      "url":  "samples/fluid-ensemble/48-27.wav",
+                      "rootNote":  73,
+                      "keyRange":  [
+                                       72,
+                                       74
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  0.7808163265306123,
+                                   "end":  1.6821768707482994
+                               }
+                  },
+                  {
+                      "id":  "48-29-75",
+                      "sampleSet":  "48",
+                      "url":  "samples/fluid-ensemble/48-29.wav",
+                      "rootNote":  76,
+                      "keyRange":  [
+                                       75,
+                                       77
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  0.32013605442176873,
+                                   "end":  1.6121541950113378
+                               }
+                  },
+                  {
+                      "id":  "48-31-78",
+                      "sampleSet":  "48",
+                      "url":  "samples/fluid-ensemble/48-31.wav",
+                      "rootNote":  79,
+                      "keyRange":  [
+                                       78,
+                                       81
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  0.6164172335600907,
+                                   "end":  1.4108843537414966
+                               }
+                  },
+                  {
+                      "id":  "48-33-82",
+                      "sampleSet":  "48",
+                      "url":  "samples/fluid-ensemble/48-33.wav",
+                      "rootNote":  83,
+                      "keyRange":  [
+                                       82,
+                                       96
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  0.4053968253968254,
+                                   "end":  1.3093424036281178
+                               }
+                  },
+                  {
+                      "id":  "48-32-97",
+                      "sampleSet":  "48",
+                      "url":  "samples/fluid-ensemble/48-32.wav",
+                      "rootNote":  83,
+                      "keyRange":  [
+                                       97,
+                                       127
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  0.6324716553287982,
+                                   "end":  1.3600907029478457
+                               }
+                  },
+                  {
+                      "id":  "52-0-0",
+                      "sampleSet":  "52",
+                      "url":  "samples/fluid-ensemble/52-0.wav",
+                      "rootNote":  39,
+                      "keyRange":  [
+                                       0,
+                                       39
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  1.209750566893424,
+                                   "end":  2.0611791383219953
+                               }
+                  },
+                  {
+                      "id":  "52-1-40",
+                      "sampleSet":  "52",
+                      "url":  "samples/fluid-ensemble/52-1.wav",
+                      "rootNote":  42,
+                      "keyRange":  [
+                                       40,
+                                       42
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  0.6725170068027211,
+                                   "end":  2.282902494331066
+                               }
+                  },
+                  {
+                      "id":  "52-2-43",
+                      "sampleSet":  "52",
+                      "url":  "samples/fluid-ensemble/52-2.wav",
+                      "rootNote":  45,
+                      "keyRange":  [
+                                       43,
+                                       45
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  0.9059863945578231,
+                                   "end":  2.782857142857143
+                               }
+                  },
+                  {
+                      "id":  "52-3-46",
+                      "sampleSet":  "52",
+                      "url":  "samples/fluid-ensemble/52-3.wav",
+                      "rootNote":  48,
+                      "keyRange":  [
+                                       46,
+                                       48
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  1.4239909297052153,
+                                   "end":  3.0150113378684806
+                               }
+                  },
+                  {
+                      "id":  "52-4-49",
+                      "sampleSet":  "52",
+                      "url":  "samples/fluid-ensemble/52-4.wav",
+                      "rootNote":  51,
+                      "keyRange":  [
+                                       49,
+                                       51
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  1.3774149659863946,
+                                   "end":  3.146031746031746
+                               }
+                  },
+                  {
+                      "id":  "52-5-52",
+                      "sampleSet":  "52",
+                      "url":  "samples/fluid-ensemble/52-5.wav",
+                      "rootNote":  54,
+                      "keyRange":  [
+                                       52,
+                                       54
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  1.0687074829931973,
+                                   "end":  3.034421768707483
+                               }
+                  },
+                  {
+                      "id":  "52-6-55",
+                      "sampleSet":  "52",
+                      "url":  "samples/fluid-ensemble/52-6.wav",
+                      "rootNote":  57,
+                      "keyRange":  [
+                                       55,
+                                       57
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  0.9143310657596372,
+                                   "end":  2.608888888888889
+                               }
+                  },
+                  {
+                      "id":  "52-7-58",
+                      "sampleSet":  "52",
+                      "url":  "samples/fluid-ensemble/52-7.wav",
+                      "rootNote":  60,
+                      "keyRange":  [
+                                       58,
+                                       60
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  1.3016780045351475,
+                                   "end":  2.557732426303855
+                               }
+                  },
+                  {
+                      "id":  "52-8-61",
+                      "sampleSet":  "52",
+                      "url":  "samples/fluid-ensemble/52-8.wav",
+                      "rootNote":  63,
+                      "keyRange":  [
+                                       61,
+                                       63
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  1.0520181405895692,
+                                   "end":  2.4604988662131517
+                               }
+                  },
+                  {
+                      "id":  "52-9-64",
+                      "sampleSet":  "52",
+                      "url":  "samples/fluid-ensemble/52-9.wav",
+                      "rootNote":  66,
+                      "keyRange":  [
+                                       64,
+                                       66
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  0.560952380952381,
+                                   "end":  2.7508843537414966
+                               }
+                  },
+                  {
+                      "id":  "52-10-67",
+                      "sampleSet":  "52",
+                      "url":  "samples/fluid-ensemble/52-10.wav",
+                      "rootNote":  69,
+                      "keyRange":  [
+                                       67,
+                                       69
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  0.6569614512471655,
+                                   "end":  2.424625850340136
+                               }
+                  },
+                  {
+                      "id":  "52-11-70",
+                      "sampleSet":  "52",
+                      "url":  "samples/fluid-ensemble/52-11.wav",
+                      "rootNote":  72,
+                      "keyRange":  [
+                                       70,
+                                       72
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  0.5622675736961451,
+                                   "end":  1.6602267573696146
+                               }
+                  },
+                  {
+                      "id":  "52-12-73",
+                      "sampleSet":  "52",
+                      "url":  "samples/fluid-ensemble/52-12.wav",
+                      "rootNote":  75,
+                      "keyRange":  [
+                                       73,
+                                       75
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  0.7340136054421769,
+                                   "end":  2.2936054421768706
+                               }
+                  },
+                  {
+                      "id":  "52-13-76",
+                      "sampleSet":  "52",
+                      "url":  "samples/fluid-ensemble/52-13.wav",
+                      "rootNote":  78,
+                      "keyRange":  [
+                                       76,
+                                       78
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  0.4687981859410431,
+                                   "end":  1.7253061224489796
+                               }
+                  },
+                  {
+                      "id":  "52-14-79",
+                      "sampleSet":  "52",
+                      "url":  "samples/fluid-ensemble/52-14.wav",
+                      "rootNote":  81,
+                      "keyRange":  [
+                                       79,
+                                       127
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  0.8314739229024943,
+                                   "end":  2.320816326530612
+                               }
+                  },
+                  {
+                      "id":  "61-0-0",
+                      "sampleSet":  "61",
+                      "url":  "samples/fluid-ensemble/61-0.wav",
+                      "rootNote":  41,
+                      "keyRange":  [
+                                       0,
+                                       41
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  3.5317006802721087,
+                                   "end":  5.272154195011338
+                               }
+                  },
+                  {
+                      "id":  "61-1-42",
+                      "sampleSet":  "61",
+                      "url":  "samples/fluid-ensemble/61-1.wav",
+                      "rootNote":  48,
+                      "keyRange":  [
+                                       42,
+                                       48
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  2.1495691609977325,
+                                   "end":  4.923582766439909
+                               }
+                  },
+                  {
+                      "id":  "61-2-49",
+                      "sampleSet":  "61",
+                      "url":  "samples/fluid-ensemble/61-2.wav",
+                      "rootNote":  54,
+                      "keyRange":  [
+                                       49,
+                                       54
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  1.962312925170068,
+                                   "end":  5.027755102040817
+                               }
+                  },
+                  {
+                      "id":  "61-3-55",
+                      "sampleSet":  "61",
+                      "url":  "samples/fluid-ensemble/61-3.wav",
+                      "rootNote":  58,
+                      "keyRange":  [
+                                       55,
+                                       58
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  1.6253968253968254,
+                                   "end":  4.411519274376417
+                               }
+                  },
+                  {
+                      "id":  "61-4-59",
+                      "sampleSet":  "61",
+                      "url":  "samples/fluid-ensemble/61-4.wav",
+                      "rootNote":  60,
+                      "keyRange":  [
+                                       59,
+                                       60
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  1.3240816326530611,
+                                   "end":  3.7035827664399092
+                               }
+                  },
+                  {
+                      "id":  "61-5-61",
+                      "sampleSet":  "61",
+                      "url":  "samples/fluid-ensemble/61-5.wav",
+                      "rootNote":  65,
+                      "keyRange":  [
+                                       61,
+                                       65
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  1.4763265306122448,
+                                   "end":  4.0859410430839
+                               }
+                  },
+                  {
+                      "id":  "61-6-66",
+                      "sampleSet":  "61",
+                      "url":  "samples/fluid-ensemble/61-6.wav",
+                      "rootNote":  69,
+                      "keyRange":  [
+                                       66,
+                                       69
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  1.104671201814059,
+                                   "end":  3.4126077097505667
+                               }
+                  },
+                  {
+                      "id":  "61-7-70",
+                      "sampleSet":  "61",
+                      "url":  "samples/fluid-ensemble/61-7.wav",
+                      "rootNote":  72,
+                      "keyRange":  [
+                                       70,
+                                       72
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  0.46448979591836737,
+                                   "end":  2.2635827664399093
+                               }
+                  },
+                  {
+                      "id":  "61-8-73",
+                      "sampleSet":  "61",
+                      "url":  "samples/fluid-ensemble/61-8.wav",
+                      "rootNote":  77,
+                      "keyRange":  [
+                                       73,
+                                       77
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  1.463764172335601,
+                                   "end":  3.563537414965986
+                               }
+                  },
+                  {
+                      "id":  "61-9-78",
+                      "sampleSet":  "61",
+                      "url":  "samples/fluid-ensemble/61-9.wav",
+                      "rootNote":  84,
+                      "keyRange":  [
+                                       78,
+                                       127
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  1.2075736961451247,
+                                   "end":  3.6799546485260772
+                               }
+                  },
+                  {
+                      "id":  "89-1-0",
+                      "sampleSet":  "89",
+                      "url":  "samples/fluid-ensemble/89-1.wav",
+                      "rootNote":  84,
+                      "keyRange":  [
+                                       0,
+                                       108
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  1.5638095238095238,
+                                   "end":  2.1517460317460317
+                               }
+                  },
+                  {
+                      "id":  "89-0-109",
+                      "sampleSet":  "89",
+                      "url":  "samples/fluid-ensemble/89-0.wav",
+                      "rootNote":  84,
+                      "keyRange":  [
+                                       109,
+                                       127
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  0.8307936507936508,
+                                   "end":  1.1613151927437642
+                               }
+                  },
+                  {
+                      "id":  "90-0-0",
+                      "sampleSet":  "90",
+                      "url":  "samples/fluid-ensemble/90-0.wav",
+                      "rootNote":  84,
+                      "keyRange":  [
+                                       0,
+                                       127
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  0.43714285714285717,
+                                   "end":  1.040090702947846
+                               }
+                  },
+                  {
+                      "id":  "91-1-0",
+                      "sampleSet":  "91",
+                      "url":  "samples/fluid-ensemble/91-1.wav",
+                      "rootNote":  76,
+                      "keyRange":  [
+                                       0,
+                                       48
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  2.7210884353741496,
+                                   "end":  3.5263038548752834
+                               }
+                  },
+                  {
+                      "id":  "91-2-49",
+                      "sampleSet":  "91",
+                      "url":  "samples/fluid-ensemble/91-2.wav",
+                      "rootNote":  60,
+                      "keyRange":  [
+                                       49,
+                                       60
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  0.3986394557823129,
+                                   "end":  1.970702947845805
+                               }
+                  },
+                  {
+                      "id":  "91-3-61",
+                      "sampleSet":  "91",
+                      "url":  "samples/fluid-ensemble/91-3.wav",
+                      "rootNote":  72,
+                      "keyRange":  [
+                                       61,
+                                       72
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  0.5218140589569161,
+                                   "end":  1.3059410430839002
+                               }
+                  },
+                  {
+                      "id":  "91-4-73",
+                      "sampleSet":  "91",
+                      "url":  "samples/fluid-ensemble/91-4.wav",
+                      "rootNote":  84,
+                      "keyRange":  [
+                                       73,
+                                       84
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  0.37238095238095237,
+                                   "end":  0.6541043083900226
+                               }
+                  },
+                  {
+                      "id":  "91-5-85",
+                      "sampleSet":  "91",
+                      "url":  "samples/fluid-ensemble/91-5.wav",
+                      "rootNote":  96,
+                      "keyRange":  [
+                                       85,
+                                       127
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  0.536734693877551,
+                                   "end":  1.0426757369614512
+                               }
+                  },
+                  {
+                      "id":  "92-2-0",
+                      "sampleSet":  "92",
+                      "url":  "samples/fluid-ensemble/92-2.wav",
+                      "rootNote":  84,
+                      "keyRange":  [
+                                       0,
+                                       127
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  0.17206349206349206,
+                                   "end":  0.24666666666666667
+                               }
+                  },
+                  {
+                      "id":  "95-0-0",
+                      "sampleSet":  "95",
+                      "url":  "samples/fluid-ensemble/95-0.wav",
+                      "rootNote":  84,
+                      "keyRange":  [
+                                       0,
+                                       127
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  -3,
+                      "loop":  {
+                                   "start":  0.8307936507936508,
+                                   "end":  1.1613151927437642
+                               }
+                  },
+                  {
+                      "id":  "aurora-36",
+                      "sampleSet":  "aurora",
+                      "url":  "samples/fluid-ensemble/aurora-36.wav",
+                      "rootNote":  36,
+                      "keyRange":  [
+                                       0,
+                                       38
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  0,
+                      "loop":  {
+                                   "start":  1,
+                                   "end":  4
+                               }
+                  },
+                  {
+                      "id":  "aurora-42",
+                      "sampleSet":  "aurora",
+                      "url":  "samples/fluid-ensemble/aurora-42.wav",
+                      "rootNote":  42,
+                      "keyRange":  [
+                                       39,
+                                       44
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  0,
+                      "loop":  {
+                                   "start":  1,
+                                   "end":  4
+                               }
+                  },
+                  {
+                      "id":  "aurora-48",
+                      "sampleSet":  "aurora",
+                      "url":  "samples/fluid-ensemble/aurora-48.wav",
+                      "rootNote":  48,
+                      "keyRange":  [
+                                       45,
+                                       50
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  0,
+                      "loop":  {
+                                   "start":  1,
+                                   "end":  4
+                               }
+                  },
+                  {
+                      "id":  "aurora-54",
+                      "sampleSet":  "aurora",
+                      "url":  "samples/fluid-ensemble/aurora-54.wav",
+                      "rootNote":  54,
+                      "keyRange":  [
+                                       51,
+                                       56
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  0,
+                      "loop":  {
+                                   "start":  1,
+                                   "end":  4
+                               }
+                  },
+                  {
+                      "id":  "aurora-60",
+                      "sampleSet":  "aurora",
+                      "url":  "samples/fluid-ensemble/aurora-60.wav",
+                      "rootNote":  60,
+                      "keyRange":  [
+                                       57,
+                                       62
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  0,
+                      "loop":  {
+                                   "start":  1,
+                                   "end":  4
+                               }
+                  },
+                  {
+                      "id":  "aurora-66",
+                      "sampleSet":  "aurora",
+                      "url":  "samples/fluid-ensemble/aurora-66.wav",
+                      "rootNote":  66,
+                      "keyRange":  [
+                                       63,
+                                       68
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  0,
+                      "loop":  {
+                                   "start":  1,
+                                   "end":  4
+                               }
+                  },
+                  {
+                      "id":  "aurora-72",
+                      "sampleSet":  "aurora",
+                      "url":  "samples/fluid-ensemble/aurora-72.wav",
+                      "rootNote":  72,
+                      "keyRange":  [
+                                       69,
+                                       74
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  0,
+                      "loop":  {
+                                   "start":  1,
+                                   "end":  4
+                               }
+                  },
+                  {
+                      "id":  "aurora-78",
+                      "sampleSet":  "aurora",
+                      "url":  "samples/fluid-ensemble/aurora-78.wav",
+                      "rootNote":  78,
+                      "keyRange":  [
+                                       75,
+                                       80
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  0,
+                      "loop":  {
+                                   "start":  1,
+                                   "end":  4
+                               }
+                  },
+                  {
+                      "id":  "aurora-84",
+                      "sampleSet":  "aurora",
+                      "url":  "samples/fluid-ensemble/aurora-84.wav",
+                      "rootNote":  84,
+                      "keyRange":  [
+                                       81,
+                                       127
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  0,
+                      "loop":  {
+                                   "start":  1,
+                                   "end":  4
+                               }
+                  },
+                  {
+                      "id":  "ocean-36",
+                      "sampleSet":  "ocean",
+                      "url":  "samples/fluid-ensemble/ocean-36.wav",
+                      "rootNote":  36,
+                      "keyRange":  [
+                                       0,
+                                       38
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  0,
+                      "loop":  {
+                                   "start":  1,
+                                   "end":  4
+                               }
+                  },
+                  {
+                      "id":  "ocean-42",
+                      "sampleSet":  "ocean",
+                      "url":  "samples/fluid-ensemble/ocean-42.wav",
+                      "rootNote":  42,
+                      "keyRange":  [
+                                       39,
+                                       44
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  0,
+                      "loop":  {
+                                   "start":  1,
+                                   "end":  4
+                               }
+                  },
+                  {
+                      "id":  "ocean-48",
+                      "sampleSet":  "ocean",
+                      "url":  "samples/fluid-ensemble/ocean-48.wav",
+                      "rootNote":  48,
+                      "keyRange":  [
+                                       45,
+                                       50
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  0,
+                      "loop":  {
+                                   "start":  1,
+                                   "end":  4
+                               }
+                  },
+                  {
+                      "id":  "ocean-54",
+                      "sampleSet":  "ocean",
+                      "url":  "samples/fluid-ensemble/ocean-54.wav",
+                      "rootNote":  54,
+                      "keyRange":  [
+                                       51,
+                                       56
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  0,
+                      "loop":  {
+                                   "start":  1,
+                                   "end":  4
+                               }
+                  },
+                  {
+                      "id":  "ocean-60",
+                      "sampleSet":  "ocean",
+                      "url":  "samples/fluid-ensemble/ocean-60.wav",
+                      "rootNote":  60,
+                      "keyRange":  [
+                                       57,
+                                       62
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  0,
+                      "loop":  {
+                                   "start":  1,
+                                   "end":  4
+                               }
+                  },
+                  {
+                      "id":  "ocean-66",
+                      "sampleSet":  "ocean",
+                      "url":  "samples/fluid-ensemble/ocean-66.wav",
+                      "rootNote":  66,
+                      "keyRange":  [
+                                       63,
+                                       68
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  0,
+                      "loop":  {
+                                   "start":  1,
+                                   "end":  4
+                               }
+                  },
+                  {
+                      "id":  "ocean-72",
+                      "sampleSet":  "ocean",
+                      "url":  "samples/fluid-ensemble/ocean-72.wav",
+                      "rootNote":  72,
+                      "keyRange":  [
+                                       69,
+                                       74
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  0,
+                      "loop":  {
+                                   "start":  1,
+                                   "end":  4
+                               }
+                  },
+                  {
+                      "id":  "ocean-78",
+                      "sampleSet":  "ocean",
+                      "url":  "samples/fluid-ensemble/ocean-78.wav",
+                      "rootNote":  78,
+                      "keyRange":  [
+                                       75,
+                                       80
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  0,
+                      "loop":  {
+                                   "start":  1,
+                                   "end":  4
+                               }
+                  },
+                  {
+                      "id":  "ocean-84",
+                      "sampleSet":  "ocean",
+                      "url":  "samples/fluid-ensemble/ocean-84.wav",
+                      "rootNote":  84,
+                      "keyRange":  [
+                                       81,
+                                       127
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  0,
+                      "loop":  {
+                                   "start":  1,
+                                   "end":  4
+                               }
+                  },
+                  {
+                      "id":  "symphony-36",
+                      "sampleSet":  "symphony",
+                      "url":  "samples/fluid-ensemble/symphony-36.wav",
+                      "rootNote":  36,
+                      "keyRange":  [
+                                       0,
+                                       38
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  0,
+                      "loop":  {
+                                   "start":  1,
+                                   "end":  4
+                               }
+                  },
+                  {
+                      "id":  "symphony-42",
+                      "sampleSet":  "symphony",
+                      "url":  "samples/fluid-ensemble/symphony-42.wav",
+                      "rootNote":  42,
+                      "keyRange":  [
+                                       39,
+                                       44
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  0,
+                      "loop":  {
+                                   "start":  1,
+                                   "end":  4
+                               }
+                  },
+                  {
+                      "id":  "symphony-48",
+                      "sampleSet":  "symphony",
+                      "url":  "samples/fluid-ensemble/symphony-48.wav",
+                      "rootNote":  48,
+                      "keyRange":  [
+                                       45,
+                                       50
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  0,
+                      "loop":  {
+                                   "start":  1,
+                                   "end":  4
+                               }
+                  },
+                  {
+                      "id":  "symphony-54",
+                      "sampleSet":  "symphony",
+                      "url":  "samples/fluid-ensemble/symphony-54.wav",
+                      "rootNote":  54,
+                      "keyRange":  [
+                                       51,
+                                       56
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  0,
+                      "loop":  {
+                                   "start":  1,
+                                   "end":  4
+                               }
+                  },
+                  {
+                      "id":  "symphony-60",
+                      "sampleSet":  "symphony",
+                      "url":  "samples/fluid-ensemble/symphony-60.wav",
+                      "rootNote":  60,
+                      "keyRange":  [
+                                       57,
+                                       62
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  0,
+                      "loop":  {
+                                   "start":  1,
+                                   "end":  4
+                               }
+                  },
+                  {
+                      "id":  "symphony-66",
+                      "sampleSet":  "symphony",
+                      "url":  "samples/fluid-ensemble/symphony-66.wav",
+                      "rootNote":  66,
+                      "keyRange":  [
+                                       63,
+                                       68
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  0,
+                      "loop":  {
+                                   "start":  1,
+                                   "end":  4
+                               }
+                  },
+                  {
+                      "id":  "symphony-72",
+                      "sampleSet":  "symphony",
+                      "url":  "samples/fluid-ensemble/symphony-72.wav",
+                      "rootNote":  72,
+                      "keyRange":  [
+                                       69,
+                                       74
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  0,
+                      "loop":  {
+                                   "start":  1,
+                                   "end":  4
+                               }
+                  },
+                  {
+                      "id":  "symphony-78",
+                      "sampleSet":  "symphony",
+                      "url":  "samples/fluid-ensemble/symphony-78.wav",
+                      "rootNote":  78,
+                      "keyRange":  [
+                                       75,
+                                       80
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  0,
+                      "loop":  {
+                                   "start":  1,
+                                   "end":  4
+                               }
+                  },
+                  {
+                      "id":  "symphony-84",
+                      "sampleSet":  "symphony",
+                      "url":  "samples/fluid-ensemble/symphony-84.wav",
+                      "rootNote":  84,
+                      "keyRange":  [
+                                       81,
+                                       127
+                                   ],
+                      "velocityRange":  [
+                                            1,
+                                            127
+                                        ],
+                      "tuningCents":  0,
+                      "gainDb":  0,
+                      "loop":  {
+                                   "start":  1,
+                                   "end":  4
+                               }
+                  }
+              ]
+}
