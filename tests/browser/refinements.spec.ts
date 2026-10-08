@@ -26,7 +26,10 @@ test('sound arrows follow dropdown order; Save overwrites and Save as creates nu
   await expect(selection.locator('option:checked')).toHaveText('11 · Natural Grand');
   const id = await selection.inputValue();
   await layer.getByRole('button', { name: 'Наступний звук', exact: true }).click();
+  await expect(sound).toHaveValue('soft-grand');
   await page.getByRole('button', { name: 'Зберегти', exact: true }).click();
+  // Reload only after the IndexedDB transaction and draft/settings flush finish.
+  await expect(page.getByRole('button', { name: 'Зберегти', exact: true })).toBeEnabled();
   await expect(selection).toHaveValue(id); await expect(selection.locator('option')).toHaveCount(11);
   await page.reload(); await expect(sound).toHaveValue('soft-grand');
   await page.getByRole('button', { name: 'Зберегти як', exact: true }).click();
